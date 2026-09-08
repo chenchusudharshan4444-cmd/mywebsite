@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --color-canvas: #0b0f19;
+  --color-surface: #111827;
+  --color-surface-dim: #0f131d;
+  --color-surface-card: #141b2d;
+  --color-border-subtle: #1e293b;
+  --color-accent-violet: #8b5cf6;
+  --color-accent-cyan: #38bdf8;
+  --color-accent-indigo: #6366f1;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b0f19;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Glow animation */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
